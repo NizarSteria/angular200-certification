@@ -1,0 +1,10 @@
+<td>{{user.id}}</td>
+<td><a href="#/user/{{user.id}}">{{user.name}}</a></td>
+<td>{{user.company}}</td>
+<td>{{user.email}}
+    <span ng-show="displayAction">
+        <span class="userAction glyphicon glyphicon-trash" ng-click="delete()" title="delete"></span>
+        <a ng-href="#/edit/{{user.id}}"><span class="userAction glyphicon glyphicon-pencil"  title="edit"></a></span>
+    </span>
+</td>
+

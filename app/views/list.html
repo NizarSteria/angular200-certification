@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="search">Filter</label>
+                <input id="search" type="text" class="form-control" placeholder="Filter ..." ng-model="search">
+            </div>
+        </form>
+    </div>
+
+
+    <h2 class="page-header">{{users.length}} users found</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>company</th>
+                <th>email</th>
+            </tr>
+            </thead>
+            <tbody>
+             <tr data-user-info  user="user" ng-repeat="user in users | filter:{name:search}" ondelete="deleteUser(user)"></tr>
+<!--             <tr ng-repeat="user in users | filter:search"> -->
+<!--                 <td>{{user.id}}</td> -->
+<!--                 <td><a href="#/user/{{user.id}}">{{user.name}}</a></td> -->
+<!--                 <td>{{user.company}}</td> -->
+<!--                 <td>{{user.email}}</td> -->
+<!--             </tr>             -->
+<!--             </tbody> -->
+        </table>
+        <div class="actions">
+            <a class="btn btn-lg btn-success" ng-href="#/edit/">Ajouter</a>
+        </div>
+    </div>
+</div>
+
+ 
