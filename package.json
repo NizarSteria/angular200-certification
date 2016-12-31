@@ -2,6 +2,7 @@
   "name": "angular-admin",
   "version": "0.0.0",
   "dependencies": {},
+  "repository":"https://github.com/NizarSteria/angular200-certification.git",
   "devDependencies": {
     "body-parser": "^1.6.2",
     "express": "^4.8.2",
